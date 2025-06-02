@@ -1,0 +1,4 @@
+# Ignore DATs
+*.dat
+logs/*
+screenshots/*

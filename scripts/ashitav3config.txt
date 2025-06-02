@@ -1,0 +1,90 @@
+##########################################################################
+#
+# Ashita Default Script
+#
+# Comments start with '#'.
+# All commands start with '/'
+#
+##########################################################################
+
+/load xipivot
+/wait 4
+
+##########################################################################
+# Load Common Plugins
+##########################################################################
+
+/load WindowerInput
+/load Addons
+/load Screenshot
+/load Minimap
+/load StatusTimers
+/load lootwhore
+/load equipviewer
+/load guildwork
+
+##########################################################################
+# Load Common Addons
+##########################################################################
+
+/addon load aspect
+/addon load distance
+/addon load fps
+/addon load timestamp
+/addon load tparty
+/addon load find
+/addon load petinfo
+/addon load pupatt
+/addon load imguistyle
+/addon load blumon
+/addon load recast
+/addon load customhud
+/addon load itemwatch
+/addon load autojoin
+/addon load drawdistance
+/addon load chatmon
+/addon load checker
+/addon load allmaps
+/addon load findall
+
+##########################################################################
+# Windower Shim Addons
+##########################################################################
+
+//addon load xivbar
+//addon load enemybar
+# /addon load xivhotbar
+
+##########################################################################
+# Set Common Settings
+##########################################################################
+
+/ambient 255 255 255 255
+/fps 1
+
+/drawdistance setworld 20
+/drawdistance setmob 20 
+
+/chatmon enable inventory
+
+##########################################################################
+# Set Common Keybinds
+##########################################################################
+
+/bind SYSRQ /screenshot hide
+/bind ^v /paste
+/bind F11 /ambient
+/bind F12 /fps show
+/bind ^F1 /input /ta <a10>
+/bind ^F2 /input /ta <a11>
+/bind ^F3 /input /ta <a12>
+/bind ^F4 /input /ta <a13>
+/bind ^F5 /input /ta <a14>
+/bind ^F6 /input /ta <a15>
+/bind !F1 /input /ta <a20>
+/bind !F2 /input /ta <a21>
+/bind !F3 /input /ta <a22>
+/bind !F4 /input /ta <a23>
+/bind !F5 /input /ta <a24>
+/bind !F6 /input /ta <a25>
+/gamepad allowbackground
