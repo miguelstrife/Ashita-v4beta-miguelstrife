@@ -37,7 +37,7 @@ local sets = {
         Sub = 'Vivid Strap',
         Neck = 'Artemis\'s Medal',
         Ear1 = 'Loquac. Earring',
-        Ear2 = 'Moldavite Earring',
+        Ear2 = 'Magnetic Earring',
         Body = 'Ixion Cloak',
         Hands = 'Scholar\'s Bracers',
         Ring1 = 'Aquilo\'s Ring',
@@ -69,7 +69,7 @@ local sets = {
         Neck = 'Artemis\'s Medal',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
-        Body = 'Scholar\'s Gown',
+        Body = 'Argute Gown',
         Hands = 'Scholar\'s Bracers',
         Ring1 = 'Aquilo\'s Ring',
         Ring2 = 'Aquilo\'s Ring',
@@ -81,7 +81,7 @@ local sets = {
     ['SchLightArts'] = {
         Main = 'Iridal Staff',
         Sub = 'Vivid Strap',
-        Head = 'Scholar\'s M.board',
+        Head = 'Argute M.board',
         Neck = 'Artemis\'s Medal',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
@@ -97,7 +97,7 @@ local sets = {
     ['SchDarkArts'] = {
         Main = 'Iridal Staff',
         Sub = 'Vivid Strap',
-        Head = 'Scholar\'s M.board',
+        Head = 'Argute M.board',
         Neck = 'Artemis\'s Medal',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
@@ -113,6 +113,10 @@ local sets = {
     ['SpeedWindurst'] = {
         Body = 'Federation Aketon',
         Feet = 'Herald\'s Gaiters',
+    },
+    ['ExpRings'] = {
+        Ring1 = 'Echad Ring',
+        Ring2 = 'Emperor Band',
     },
 };
 profile.Sets = sets;
@@ -132,11 +136,20 @@ profile.OnUnload = function()
 end
 
 profile.HandleCommand = function(args)
-    if (args[1] == 'idlerefresh') then
+    local argument = args[1];
+    if (argument == 'idlerefresh') then
         if (Settings.UseRefreshIdle == true) then
             Settings.UseRefreshIdle = false;
         else
             Settings.UseRefreshIdle = true;
+            Settings.UseExpRings = false;
+        end
+    elseif (argument == 'exprings') then
+        if (Settings.UseExpRings == true) then
+            Settings.UseExpRings = false;
+        else
+            Settings.UseExpRings = true;
+            Settings.UseRefreshIdle = false;
         end
     end
 end
@@ -149,11 +162,13 @@ profile.HandleDefault = function()
         gFunc.EquipSet(sets.Tp);
     elseif (player.Status == 'Resting') then
         gFunc.EquipSet(sets.Resting);
-    elseif (string.match(environment.Area, 'Windurst')) then
+    elseif (string.match(environment.Area, 'Windurst ')) then
         gFunc.EquipSet(sets.SpeedWindurst)
     else 
         if (Settings.UseRefreshIdle == true) then
             gFunc.EquipSet(sets.Refresh);
+        elseif (Settings.UseExpRings == true) then
+            gFunc.EquipSet(sets.ExpRings);
         else
             gFunc.EquipSet(sets.Idle);
         end
