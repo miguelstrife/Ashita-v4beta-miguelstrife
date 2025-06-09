@@ -164,6 +164,8 @@ profile.HandleDefault = function()
         gFunc.EquipSet(sets.Resting);
     elseif (string.match(environment.Area, 'Windurst ')) then
         gFunc.EquipSet(sets.SpeedWindurst)
+    elseif (gData.GetBuffCount('Sublimation: Activated') > 0) then
+        gFunc.EquipSet(sets.Sublimation);
     else 
         if (Settings.UseRefreshIdle == true) then
             gFunc.EquipSet(sets.Refresh);
