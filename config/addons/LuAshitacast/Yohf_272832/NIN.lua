@@ -170,9 +170,11 @@ profile.HandleItem = function()
 end
 
 profile.HandlePrecast = function()
+    gFunc.EquipSet(sets.NinFastCast);
 end
 
 profile.HandleMidcast = function()
+    gFunc.EquipSet(sets.NinFastCast);
 end
 
 profile.HandlePreshot = function()
@@ -182,6 +184,18 @@ profile.HandleMidshot = function()
 end
 
 profile.HandleWeaponskill = function()
+    local action = gData.GetAction();
+    if (action.Name == 'Blade: Metsu') then
+        gFunc.EquipSet(sets.Metsu);
+    elseif (action.Name == 'Blade: Shun') then
+        gFunc.EquipSet(sets.Shun);
+    elseif (action.Name == 'Blade: Hi') then
+        gFunc.EquipSet(sets.MAB);
+    elseif (action.Name == 'Blade: Ku') then
+        gFunc.EquipSet(sets.MABDark);
+    else
+        gFunc.EquipSet(sets.NinTp);
+    end
 end
 
 return profile;
