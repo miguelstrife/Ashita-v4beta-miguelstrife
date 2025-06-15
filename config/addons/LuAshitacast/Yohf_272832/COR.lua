@@ -374,10 +374,10 @@ local sets = {
     ['CorSpeed'] = {
         -- Main = { Name = 'Rostam', AugPath='B' },
         -- Sub = 'Tauret',
-        Range = {
-            Name = 'Compensator',
-            AugPath = 'D'
-        },
+        -- Range = {
+        --     Name = 'Compensator',
+        --     AugPath = 'D'
+        -- },
         Ammo = 'Chrono Bullet',
         Head = {
             Name = 'Adhemar Bonnet +1',
@@ -471,8 +471,8 @@ local sets = {
         -- Main = { Name = 'Rostam', AugPath='B' },
         -- Sub = 'Tauret',
         Range = {
-            Name = 'Compensator',
-            AugPath = 'D'
+            Name = 'Fomalhaut',
+            AugPath = 'A'
         },
         Ammo = 'Chrono Bullet',
         Head = {
