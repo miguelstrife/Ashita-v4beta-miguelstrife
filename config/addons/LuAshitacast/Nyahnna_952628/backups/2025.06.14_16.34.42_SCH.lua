@@ -1,19 +1,19 @@
 local profile = {};
 local sets = {
     ['Idle'] = {
-        Main = 'Homestead Staff',
+        Main = 'Iridal Staff',
         Sub = 'Vivid Strap',
-        Head = 'Weath. Corona +1',
+        Head = 'Scholar\'s M.board',
         Neck = 'Artemis\'s Medal',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
-        Body = 'Weather. Robe +1',
-        Hands = 'Weath. Cuffs +1',
+        Body = 'Scholar\'s Gown',
+        Hands = 'Scholar\'s Bracers',
         Ring1 = 'Aquilo\'s Ring',
         Ring2 = 'Aquilo\'s Ring',
         Back = 'Hecate\'s Cape',
         Waist = 'Argute Belt',
-        Legs = 'Weath. Pants +1',
+        Legs = 'Scholar\'s Pants',
         Feet = 'Herald\'s Gaiters',
     },
     ['Tp'] = {
@@ -48,18 +48,18 @@ local sets = {
         Feet = 'Scholar\'s Loafers',
     },
     ['Refresh'] = {
-        -- Main = 'Iridal Staff',
-        -- Sub = 'Vivid Strap',
-        -- Neck = 'Artemis\'s Medal',
-        -- Ear1 = 'Loquac. Earring',
-        -- Ear2 = 'Moldavite Earring',
+        Main = 'Iridal Staff',
+        Sub = 'Vivid Strap',
+        Neck = 'Artemis\'s Medal',
+        Ear1 = 'Loquac. Earring',
+        Ear2 = 'Moldavite Earring',
         Body = 'Ixion Cloak',
-        -- Hands = 'Scholar\'s Bracers',
-        -- Ring1 = 'Aquilo\'s Ring',
-        -- Ring2 = 'Aquilo\'s Ring',
-        -- Back = 'Hecate\'s Cape',
-        -- Waist = 'Argute Belt',
-        -- Legs = 'Scholar\'s Pants',
+        Hands = 'Scholar\'s Bracers',
+        Ring1 = 'Aquilo\'s Ring',
+        Ring2 = 'Aquilo\'s Ring',
+        Back = 'Hecate\'s Cape',
+        Waist = 'Argute Belt',
+        Legs = 'Scholar\'s Pants',
         Feet = 'Herald\'s Gaiters',
     },
     ['Sublimation'] = {  
@@ -135,70 +135,6 @@ local sets = {
         Back = 'Dew Silk Cape',
         Waist = 'Argute Belt',
         Legs = 'Scholar\'s Pants',
-        Feet = 'Weath. Souliers +1',
-    },
-    ['Enhancing'] = {
-        Main = 'Homestead Staff',
-        Sub = 'Vivid Strap',
-        Head = 'Weath. Corona +1',
-        Ear1 = 'Loquac. Earring',
-        Ear2 = 'Magnetic Earring',
-        Body = 'Weather. Robe +1',
-        Hands = 'Weath. Cuffs +1',
-        Ring1 = 'Aquilo\'s Ring',
-        Ring2 = 'Aquilo\'s Ring',
-        Back = 'Dew Silk Cape',
-        Waist = 'Argute Belt',
-        Legs = 'Weath. Pants +1',
-        Feet = 'Weath. Souliers +1',
-    },
-    ['Nuke'] = {
-        Main = 'Homestead Staff',
-        Sub = 'Vivid Strap',
-        Head = 'Weath. Corona +1',
-        Neck = 'Artemis\'s Medal',
-        Ear1 = 'Loquac. Earring',
-        Ear2 = 'Moldavite Earring',
-        Body = 'Weather. Robe +1',
-        Hands = 'Weath. Cuffs +1',
-        Ring1 = 'Aquilo\'s Ring',
-        Ring2 = 'Aquilo\'s Ring',
-        Back = 'Hecate\'s Cape',
-        Waist = 'Argute Belt',
-        Legs = 'Weath. Pants +1',
-        Feet = 'Weath. Souliers +1',
-    },
-    ['Dark'] = {
-        Main = 'Homestead Staff',
-        Sub = 'Vivid Strap',
-        Head = 'Weath. Corona +1',
-        Neck = 'Artemis\'s Medal',
-        Ear1 = 'Loquac. Earring',
-        Ear2 = 'Moldavite Earring',
-        Body = 'Weather. Robe +1',
-        Hands = 'Weath. Cuffs +1',
-        Ring1 = 'Aquilo\'s Ring',
-        Ring2 = 'Aquilo\'s Ring',
-        Back = 'Hecate\'s Cape',
-        Waist = 'Argute Belt',
-        Legs = 'Weath. Pants +1',
-        Feet = 'Weath. Souliers +1',
-    },
-    ['Enfeebling'] = {
-        Main = 'Homestead Staff',
-        Sub = 'Vivid Strap',
-        Head = 'Weath. Corona +1',
-        Neck = 'Artemis\'s Medal',
-        Ear1 = 'Loquac. Earring',
-        Ear2 = 'Moldavite Earring',
-        Body = 'Weather. Robe +1',
-        Hands = 'Weath. Cuffs +1',
-        Ring1 = 'Aquilo\'s Ring',
-        Ring2 = 'Aquilo\'s Ring',
-        Back = 'Hecate\'s Cape',
-        Waist = 'Argute Belt',
-        Legs = 'Weath. Pants +1',
-        Feet = 'Weath. Souliers +1',
     },
 };
 profile.Sets = sets;
@@ -274,22 +210,17 @@ profile.HandleItem = function()
 end
 
 profile.HandlePrecast = function()
-    if (gData.GetBuffCount('Light Arts') > 0) or (gData.GetBuffCount('Addendum: Light') > 0)then
-        gFunc.EquipSet(sets.SchLightArts);
-    elseif (gData.GetBuffCount('Dark Arts') > 0) or (gData.GetBuffCount('Addendum: Black') > 0) then
-        gFunc.EquipSet(sets.SchDarkArts);
-    end
 end
 
 profile.HandleMidcast = function()
     -- local action = gData.GetAction();
     --  gData.GetBuffCount(matchBuff)
     local spell = gData.GetAction();
-    -- if (gData.GetBuffCount('Light Arts') > 0) or (gData.GetBuffCount('Addendum: Light') > 0)then
-    --     gFunc.EquipSet(sets.SchLightArts);
-    -- elseif (gData.GetBuffCount('Dark Arts') > 0) or (gData.GetBuffCount('Addendum: Black') > 0) then
-    --     gFunc.EquipSet(sets.SchDarkArts);
-    if (spell.Skill == 'Healing Magic') then
+    if (gData.GetBuffCount('Light Arts') > 0) or (gData.GetBuffCount('Addendum: Light') > 0)then
+        gFunc.EquipSet(sets.SchLightArts);
+    elseif (gData.GetBuffCount('Dark Arts') > 0) or (gData.GetBuffCount('Addendum: Black') > 0) then
+        gFunc.EquipSet(sets.SchDarkArts);
+    elseif (spell.Skill == 'Healing Magic') then
         gFunc.EquipSet(sets.Cure);
     elseif (spell.Skill == 'Enhancing Magic') then
         gFunc.EquipSet(sets.Enhancing);
