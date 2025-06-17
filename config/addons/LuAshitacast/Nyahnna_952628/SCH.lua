@@ -207,7 +207,8 @@ profile.Packer = {
 };
 
 local Settings = {
-    UseRefreshIdle = true
+    UseRefreshIdle = true,
+    UseExpRings = false
 };
 
 profile.OnLoad = function()
