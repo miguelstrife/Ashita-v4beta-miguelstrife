@@ -143,7 +143,7 @@ profile.HandleDefault = function()
     
     if(Settings.UseRegen == true and player.Status ~= 'Engaged') then
         gFunc.EquipSet(sets.PupRegen);
-    elseif(Settings.UsePetTp == true and pet.Status == 'Engaged') then
+    elseif(Settings.UsePetTp == true and pet~= nil and pet.Status == 'Engaged') then
         gFunc.EquipSet(sets.PupPetTp);
     elseif (player.Status == 'Engaged') then
         gFunc.EquipSet(sets.PupMasterTP);
