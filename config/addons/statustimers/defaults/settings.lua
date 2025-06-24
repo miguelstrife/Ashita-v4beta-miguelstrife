@@ -1,10 +1,10 @@
 require('common');
 
 local settings = T{ };
-settings["icons"] = T{ };
-settings["icons"]["size"] = T{ };
 settings["menu_target"] = T{ };
 settings["split_bars"] = T{ };
+settings["icons"] = T{ };
+settings["icons"]["size"] = T{ };
 settings["font"] = T{ };
 settings["visual_aid"] = T{ };
 settings["visual_aid"]["filters"] = T{ };
@@ -13,12 +13,12 @@ settings["visual_aid"]["thresholds"] = T{ };
 settings["visual_aid"]["thresholds"]["t25"] = T{ };
 settings["visual_aid"]["thresholds"]["t75"] = T{ };
 settings["visual_aid"]["thresholds"]["t50"] = T{ };
+settings["menu_target"]["enabled"] = true;
+settings["split_bars"]["enabled"] = false;
+settings["ui_scale"] = 1;
 settings["icons"]["size"]["main"] = 24;
 settings["icons"]["size"]["target"] = 16;
 settings["icons"]["theme"] = "-default-";
-settings["menu_target"]["enabled"] = true;
-settings["ui_scale"] = 1;
-settings["split_bars"]["enabled"] = false;
 settings["font"]["color"] = 4294967295;
 settings["font"]["background"] = 1912602624;
 settings["visual_aid"]["color75"] = 4294967091;
