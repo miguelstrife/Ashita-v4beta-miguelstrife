@@ -39,7 +39,7 @@
 /addon load aspect
 /addon load find 
 /addon load petinfo
-#/addon load pupatt
+/addon load pupsets
 /addon load imguistyle
 /addon load blumon
 /addon load recast
@@ -54,6 +54,8 @@
 
 /addon load statustimers
 /addon load luashitacast
+/addon load chains
+/addon load rolltracker
 
 ##########################################################################
 #
