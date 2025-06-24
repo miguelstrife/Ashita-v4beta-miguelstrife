@@ -342,15 +342,15 @@ local sets = {
     ['CorEvis'] = {
         -- Main = { Name = 'Rostam', AugPath='B' },
         -- Sub = 'Tauret',
-        Range = {
-            Name = 'Compensator',
-            AugPath = 'D'
-        },
-        Ammo = 'Chrono Bullet',
-        Head = {
-            Name = 'Adhemar Bonnet +1',
-            AugPath = 'B'
-        },
+        -- Range = {
+        --     Name = 'Compensator',
+        --     AugPath = 'D'
+        -- },
+        -- Ammo = 'Chrono Bullet',
+        -- Head = {
+        --     Name = 'Adhemar Bonnet +1',
+        --     AugPath = 'B'
+        -- },
         Neck = 'Fotia Gorget',
         Ear1 = 'Brutal Earring',
         Ear2 = 'Mache Earring +1',
@@ -653,10 +653,10 @@ local sets = {
         }
     },
     ['CorSavageBlade'] = {
-        Range = {
-            Name = 'Fomalhaut',
-            AugPath = 'A'
-        },
+        -- Range = {
+        --     Name = 'Fomalhaut',
+        --     AugPath = 'A'
+        -- },
         Ammo = 'Chrono Bullet',
         Head = {
             Name = 'Herculean Helm',
