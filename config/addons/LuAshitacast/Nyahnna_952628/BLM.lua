@@ -1,4 +1,5 @@
 local profile = {};
+toolset = gFunc.LoadFile('common\\toolset.lua'); -- Load the my toolset module
 local sets = {
     ['Idle'] = {
         Main = 'Iridal Staff',
@@ -72,6 +73,11 @@ local sets = {
         Ring2 = 'Emperor Band',
     },
 };
+
+local Settings = {
+    RefreshIdle = false,
+    ExpRings = false
+};
 profile.Sets = sets;
 
 profile.Packer = {
@@ -79,58 +85,19 @@ profile.Packer = {
 
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
+    toolset.ShowSettings(Settings);
 end
 
 profile.OnUnload = function()
-end
-
-local Settings = {
-    RefreshIdle = false,
-    ExpRings = false
-};
-
-local ResetVariables = function()
-    for key, value in pairs(Settings) do
-        Settings[key] = false;
-    end
-end
-
-local SendMessageToChatBoxHelper = function(message)
-    AshitaCore:GetChatManager():QueueCommand(1, '/echo ' .. message);
-end
-
-local CommandHandlerHelper = function(table, key)
-    local property = table[key];
-    if (property == true) then
-        AshitaCore:GetChatManager():QueueCommand(1, '/echo ===== [' .. key .. '] is now disabled. =====');
-        table[key] = false;
-    else
-        -- This is to have only one set triggered at a time.
-        ResetVariables();
-        table[key] = true;
-        AshitaCore:GetChatManager():QueueCommand(1, '/echo ===== [' .. key .. '] is now enabled. =====');
-    end
-end
-
-local CompareStringsIgnoreCase = function(str1, str2)
-    return str1:lower() == str2:lower();
-end
-
-local ShowSettings = function()
-    local message = '===== LuAshitaCast Settings =====\n';
-    for key, value in pairs(Settings) do
-        message = message .. key .. ': ' .. tostring(value) .. '\n';
-    end
-    SendMessageToChatBoxHelper(message);
 end
 
 profile.HandleCommand = function(args)
     -- Arguments should be EXACTLY equal to Settings keys. (e.g. UseMelee, UseExpRings)
     local argument = args[1];
     if(Settings[argument] ~= nil) then
-        CommandHandlerHelper(Settings, argument);
+        toolset.CommandHandlerHelper(Settings, argument);
     elseif(argument == 'ShowSettings') then
-        ShowSettings();
+        toolset.ShowSettings(Settings);
     end   
 end
 
@@ -144,13 +111,12 @@ profile.HandleDefault = function()
         gFunc.EquipSet(sets.Resting);
     elseif (string.match(environment.Area, 'Windurst ') and not string.match(environment.Area, '[S]')) then
         gFunc.EquipSet(sets.SpeedWindurst)
-    else if (Settings.UseRefreshIdle == true) then
-            gFunc.EquipSet(sets.Refresh);
-        elseif (Settings.UseExpRings == true) then
-            gFunc.EquipSet(sets.ExpRings);
-        else
-            gFunc.EquipSet(sets.Idle);
-        end
+    elseif (Settings.RefreshIdle == true) then
+        gFunc.EquipSet(sets.RefreshIdle);
+    elseif (Settings.ExpRings == true) then
+        gFunc.EquipSet(sets.ExpRings);
+    else
+        gFunc.EquipSet(sets.Idle);
     end
 end
 
