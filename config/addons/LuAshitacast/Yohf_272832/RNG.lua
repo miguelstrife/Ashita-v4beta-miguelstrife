@@ -330,11 +330,22 @@ local sets = {
     ['BountyShot'] = {
         Hands = 'Orion Bracers +2',
     },
+    ['ExpRings'] = {
+        Ring1 = 'Echad Ring',
+        Ring2 = 'Emperor Band',
+    },
 };
 profile.Sets = sets;
 
 profile.Packer = {
 };
+
+profile.OnLoad = function()
+    gSettings.AllowAddSet = true;
+end
+
+profile.OnUnload = function()
+end
 
 local Settings = {
     UseMelee = false,
@@ -345,13 +356,6 @@ local ResetVariables = function()
     for key, value in pairs(Settings) do
         Settings[key] = false;
     end
-end
-
-profile.OnLoad = function()
-    gSettings.AllowAddSet = true;
-end
-
-profile.OnUnload = function()
 end
 
 local SendMessageToChatBoxHelper = function(message)
@@ -373,6 +377,14 @@ end
 
 local CompareStringsIgnoreCase = function(str1, str2)
     return str1:lower() == str2:lower();
+end
+
+local ShowSettings = function()
+    local message = '===== LuAshitaCast Settings =====\n';
+    for key, value in pairs(Settings) do
+        message = message .. key .. ': ' .. tostring(value) .. '\n';
+    end
+    SendMessageToChatBoxHelper(message);
 end
 
 profile.HandleCommand = function(args)
