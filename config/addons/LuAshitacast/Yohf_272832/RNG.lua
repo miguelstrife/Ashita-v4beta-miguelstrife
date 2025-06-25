@@ -1,9 +1,9 @@
 local profile = {};
 local sets = {
     ['Idle'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Malignance Chapeau',
         Neck = 'Warder\'s Charm',
         Ear1 = 'Odnowa Earring',
@@ -18,9 +18,9 @@ local sets = {
         Feet = 'Malignance Boots',
     },
     ['Preshot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Telos Earring',
@@ -35,9 +35,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['Midshot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = { Name = 'Arcadian Beret +3', AugTrial=5460 },
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Telos Earring',
@@ -52,9 +52,9 @@ local sets = {
         Feet = 'Malignance Boots',
     },
     ['Melee'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = { Name = 'Adhemar Bonnet +1', AugPath='B' },
         Neck = 'Iskur Gorget',
         Ear1 = 'Cessance Earring',
@@ -69,9 +69,9 @@ local sets = {
         Feet = { Name = 'Herculean Boots', Augment = { [1] = '"Triple Atk."+3', [2] = 'Accuracy+15', [3] = 'Attack+12', [4] = 'DEX+2' } },
     },
     ['DoubleShot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = { Name = 'Arcadian Beret +3', AugTrial=5460 },
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Cessance Earring',
@@ -86,9 +86,9 @@ local sets = {
         Feet = 'Oshosi Leggings',
     },
     ['BarrageSet'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = { Name = 'Arcadian Beret +3', AugTrial=5460 },
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Cessance Earring',
@@ -103,9 +103,9 @@ local sets = {
         Feet = 'Orion Socks +2',
     },
     ['Sharpshot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = { Name = 'Arcadian Beret +3', AugTrial=5460 },
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Cessance Earring',
@@ -120,9 +120,26 @@ local sets = {
         Feet = 'Orion Socks +2',
     },
     ['VelocityShot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
+        Head = 'Orion Beret +3',
+        Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
+        Ear1 = 'Cessance Earring',
+        Ear2 = 'Dedition Earring',
+        Body = 'Amini Caban +2',
+        Hands = { Name = 'Carmine Fin. Ga. +1', AugPath='D' },
+        Ring1 = 'Meghanada Ring',
+        Ring2 = 'Rajas Ring',
+        Back = { Name = 'Belenus\'s Cape', Augment = '"Snapshot"+10' },
+        Waist = 'Yemaya Belt',
+        Legs = { Name = 'Adhemar Kecks +1', AugPath='D' },
+        Feet = 'Meg. Jam. +2',
+    },
+    ['DecoyShot'] = {
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Cessance Earring',
@@ -137,9 +154,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['LastStand'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Ishvara Earring',
@@ -154,9 +171,9 @@ local sets = {
         Feet = { Name = 'Adhe. Gamashes +1', AugPath='C' },
     },
     ['Wildfire'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Friomisi Earring',
         Ear2 = 'Novio Earring',
@@ -170,9 +187,9 @@ local sets = {
         Feet = { Name = 'Herculean Boots', Augment = { [1] = '"Mag. Atk. Bns."+17', [2] = 'Mag. Acc.+17', [3] = 'Weapon skill damage +2%', [4] = 'Accuracy+3', [5] = 'Attack+3', [6] = 'Pet: Mag. Acc.+19' } },
     },
     ['Coronach'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Ishvara Earring',
@@ -187,9 +204,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['Trueflight'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Friomisi Earring',
         Ear2 = 'Novio Earring',
@@ -203,9 +220,9 @@ local sets = {
         Feet = { Name = 'Herculean Boots', Augment = { [1] = '"Mag. Atk. Bns."+17', [2] = 'Mag. Acc.+17', [3] = 'Weapon skill damage +2%', [4] = 'Accuracy+3', [5] = 'Attack+3', [6] = 'Pet: Mag. Acc.+19' } },
     },
     ['Snipershot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Ishvara Earring',
@@ -220,9 +237,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['NumbingShot'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Ishvara Earring',
@@ -237,9 +254,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['SavageBlade'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = { Name = 'Scout\'s Gorget +2', AugPath='A' },
         Ear1 = 'Ishvara Earring',
@@ -254,9 +271,9 @@ local sets = {
         Feet = 'Meg. Jam. +2',
     },
     ['EmpyrealArrow'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = 'Fotia Gorget',
         Ear1 = 'Ishvara Earring',
@@ -271,9 +288,9 @@ local sets = {
         Feet = { Name = 'Adhe. Gamashes +1', AugPath='C' },
     },
     ['ArchingArrow'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = 'Fotia Gorget',
         Ear1 = 'Ishvara Earring',
@@ -288,9 +305,9 @@ local sets = {
         Feet = { Name = 'Adhe. Gamashes +1', AugPath='C' },
     },
     ['ApexArrow'] = {
-        Main = { Name = 'Perun +1', AugPath='A' },
-        Range = { Name = 'Fomalhaut', AugPath='A' },
-        Ammo = 'Chrono Bullet',
+        -- Main = { Name = 'Perun +1', AugPath='A' },
+        -- Range = { Name = 'Fomalhaut', AugPath='A' },
+        -- Ammo = 'Chrono Bullet',
         Head = 'Orion Beret +3',
         Neck = 'Fotia Gorget',
         Ear1 = 'Ishvara Earring',
@@ -304,11 +321,31 @@ local sets = {
         Legs = { Name = 'Adhemar Kecks +1', AugPath='C' },
         Feet = { Name = 'Adhe. Gamashes +1', AugPath='C' },
     },
+    ['Scavenge'] = {
+        Feet = 'Orion Socks +2',
+    },
+    ['Shadowbind'] = {
+        Hands = 'Orion Bracers +2',
+    },
+    ['BountyShot'] = {
+        Hands = 'Orion Bracers +2',
+    },
 };
 profile.Sets = sets;
 
 profile.Packer = {
 };
+
+local Settings = {
+    UseMelee = false,
+    UseExpRings = false
+};
+
+local ResetVariables = function()
+    for key, value in pairs(Settings) do
+        Settings[key] = false;
+    end
+end
 
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
@@ -317,13 +354,73 @@ end
 profile.OnUnload = function()
 end
 
-profile.HandleCommand = function(args)
+local SendMessageToChatBoxHelper = function(message)
+    AshitaCore:GetChatManager():QueueCommand(1, '/echo ' .. message);
 end
 
+local CommandHandlerHelper = function(table, key)
+    local property = table[key];
+    if (property == true) then
+        AshitaCore:GetChatManager():QueueCommand(1, '/echo ===== [' .. key .. '] is now disabled. =====');
+        table[key] = false;
+    else
+        -- This is to have only one set triggered at a time.
+        ResetVariables();
+        table[key] = true;
+        AshitaCore:GetChatManager():QueueCommand(1, '/echo ===== [' .. key .. '] is now enabled. =====');
+    end
+end
+
+local CompareStringsIgnoreCase = function(str1, str2)
+    return str1:lower() == str2:lower();
+end
+
+profile.HandleCommand = function(args)
+    -- Arguments should be EXACTLY equal to Settings keys. (e.g. UseMelee, UseExpRings)
+    local argument = args[1];
+    if(Settings[argument] ~= nil) then
+        CommandHandlerHelper(Settings, argument);
+    end   
+end
+    
 profile.HandleDefault = function()
+    local player = gData.GetPlayer();
+    local environment = gData.GetEnvironment();
+
+    if (player.Status == 'Engaged' and Settings.UseMelee) then
+        gFunc.EquipSet(sets.Melee);
+    elseif (player.Status == 'Engaged' and not Settings.UseMelee) then
+        gFunc.EquipSet(sets.Midshot);
+    elseif (player.Status == 'Resting') then
+        gFunc.EquipSet(sets.Resting);
+    elseif (string.match(environment.Area, 'Windurst ')) then
+        gFunc.EquipSet(sets.SpeedWindurst)
+    elseif (Settings.UseExpRings == true) then
+        gFunc.EquipSet(sets.ExpRings);
+    else
+        gFunc.EquipSet(sets.Idle);
+    end
 end
 
 profile.HandleAbility = function()
+    local action = gData.GetAction();
+    if (action.Name == 'Double Shot') then
+        gFunc.EquipSet(sets.DoubleShot);
+    elseif(action.Name == 'Bounty Shot') then
+        gFunc.EquipSet(sets.BountyShot);
+    elseif(action.Name == 'Scavenge') then
+        gFunc.EquipSet(sets.Scavenge);
+    elseif(action.Name == 'Shadowbind') then
+        gFunc.EquipSet(sets.Shadowbind);
+    elseif(action.Name == 'Velocity Shot') then
+        gFunc.EquipSet(sets.VelocityShot);
+    elseif(action.Name == 'Decoy Shot') then
+        gFunc.EquipSet(sets.DecoyShot);
+    elseif(action.Name == 'Eagle Eye Shot') then
+        gFunc.EquipSet(sets.Midshot);
+    elseif(action.Name == 'Sharpshot') then
+        gFunc.EquipSet(sets.Sharpshot);
+    end 
 end
 
 profile.HandleItem = function()
@@ -336,12 +433,40 @@ profile.HandleMidcast = function()
 end
 
 profile.HandlePreshot = function()
+    gFunc.EquipSet(sets.Preshot);
 end
 
 profile.HandleMidshot = function()
+    if (gData.GetBuffCount('Double Shot') > 0) then
+        gFunc.EquipSet(sets.DoubleShot);
+    elseif (gData.GetBuffCount('Barrage') > 0) then
+        gFunc.EquipSet(sets.BarrageSet);
+    else
+        gFunc.EquipSet(sets.Midshot);
+    end
 end
 
 profile.HandleWeaponskill = function()
+    local action = gData.GetAction();
+    if (action.Name == 'Last Stand') then
+        gFunc.EquipSet(sets.LastStand);
+    elseif (action.Name == 'Wildfire') then
+        gFunc.EquipSet(sets.Wildfire);
+    elseif (action.Name == 'Coronach') then
+        gFunc.EquipSet(sets.Coronach);
+    elseif (action.Name == 'Trueflight') then
+        gFunc.EquipSet(sets.Trueflight);
+    elseif (action.Name == 'Savage Blade') then
+        gFunc.EquipSet(sets.SavageBlade);
+    elseif (action.Name == 'Empyreal Arrow') then
+        gFunc.EquipSet(sets.EmpyrealArrow);
+    elseif (action.Name == 'Arching Arrow') then
+        gFunc.EquipSet(sets.ArchingArrow);
+    elseif (action.Name == 'Apex Arrow') then
+        gFunc.EquipSet(sets.ApexArrow);
+    else
+        gFunc.EquipSet(sets.SavageBlade);
+    end
 end
 
 return profile;
