@@ -17,7 +17,7 @@ toolset.CommandHandlerHelper = function(table, key)
         table[key] = false;
     else
         -- This is to have only one set triggered at a time.
-        toolset.ResetVariables();
+        toolset.ResetVariables(table);
         table[key] = true;
         AshitaCore:GetChatManager():QueueCommand(1, '/echo ===== [' .. key .. '] is now enabled. =====');
     end
