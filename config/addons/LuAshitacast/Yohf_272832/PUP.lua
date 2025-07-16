@@ -1,4 +1,5 @@
 local profile = {};
+toolset = gFunc.LoadFile('common\\toolset.lua'); -- Load the my toolset module
 local sets = {
     ['Idle'] = {
         Ammo = 'Automat. Oil +3',
@@ -112,28 +113,34 @@ end
 
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
+    toolset.ShowSettings(Settings);
 end
 
 profile.OnUnload = function()
 end
 
 profile.HandleCommand = function(args)
+    -- local argument = args[1];
+    -- if (argument == 'usePetTp') then
+    --     if (Settings.UsePetTp == true) then
+    --         Settings.UsePetTp = false;
+    --     else
+    --         toolset.ResetVariables();
+    --         Settings.UsePetTp = true;
+    --     end
+    -- elseif(argument == 'useRegen') then
+    --     if (Settings.UseRegen == true) then
+    --         Settings.UseRegen = false;
+    --     else
+    --         ResetVariables();
+    --         Settings.UseRegen = true;
+    --     end
+    -- end
+    -- Arguments should be EXACTLY equal to Settings keys. (e.g. UseMelee, UseExpRings)
     local argument = args[1];
-    if (argument == 'usePetTp') then
-        if (Settings.UsePetTp == true) then
-            Settings.UsePetTp = false;
-        else
-            ResetVariables();
-            Settings.UsePetTp = true;
-        end
-    elseif(argument == 'useRegen') then
-        if (Settings.UseRegen == true) then
-            Settings.UseRegen = false;
-        else
-            ResetVariables();
-            Settings.UseRegen = true;
-        end
-    end
+    if(Settings[argument] ~= nil) then
+        toolset.CommandHandlerHelper(Settings, argument);
+    end   
 end
 
 profile.HandleDefault = function()

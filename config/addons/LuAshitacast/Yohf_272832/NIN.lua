@@ -1,4 +1,5 @@
 local profile = {};
+toolset = gFunc.LoadFile('common\\toolset.lua'); -- Load the my toolset module
 local sets = {
     ['Idle'] = {
         Main = { Name = 'Kikoku', AugPath='A' },
@@ -137,6 +138,11 @@ local sets = {
         Feet = { Name = 'Herculean Boots', Augment = { [1] = '"Triple Atk."+3', [2] = 'Accuracy+15', [3] = 'Attack+12', [4] = 'DEX+2' } },
     },
 };
+
+local Settings = {
+    ExpRings = false
+};
+
 profile.Sets = sets;
 
 profile.Packer = {
@@ -144,6 +150,7 @@ profile.Packer = {
 
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
+    toolset.ShowSettings(Settings);
 end
 
 profile.OnUnload = function()
